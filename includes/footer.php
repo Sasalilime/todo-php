@@ -1,0 +1,1 @@
+<footer>2021 / &copy Tous droits réservés</footer>
