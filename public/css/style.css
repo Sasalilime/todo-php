@@ -33,6 +33,10 @@ h1, p {
   margin: 0;
 }
 
+h1 {
+  margin-bottom: 1rem;
+}
+
 /*container*/
 
 .container {
@@ -42,6 +46,23 @@ h1, p {
   flex-flow: column;
   color: var(--text-color);
 
+}
+
+.btn {
+  background-color: white;
+  font-weight: 700;
+  color: var(--text-color);
+  font-size: 1.6rem;
+  border:0;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  border-radius: 0.6rem;
+  margin: 0 0.5rem;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--text-color-light);
 }
 
 
@@ -78,6 +99,24 @@ header {
   min-height: 40rem;
   box-shadow: var(--box-shadow);
 
+}
+
+.todo-container h1 {
+  text-align: center;
+}
+
+.todo-form {
+display: flex;
+flex-flow: row nowrap;
+align-items: center;
+}
+
+.todo-form input {
+  flex: 1;
+  margin-right: 0.5rem;
+  border: var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
 }
 
 /*footer*/
