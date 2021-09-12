@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="todo-container">
                 <h1>Todo List</h1>
                 <form class="todo-form" method="post" action="/">
-                    <input type="text">
+                    <input name="todo" type="text">
                     <button class="btn btn-primary">Ajouter</button>
                 </form>
                 <?php if ($error) : ?>
