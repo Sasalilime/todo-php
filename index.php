@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!$error) {
         $todos = [...$todos, [
             'name' => $todo,
-            'done' => true,
+            'done' => false,
             'id' => time()
         ]];
         //ne prend pas en compte les accents file_put_contents($filename, json_encode($todos));
@@ -67,10 +67,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php endif; ?>
                 <ul class="todo-list">
                     <?php foreach ($todos as $t) : ?>
-                        <li class="todo-items">
+                        <li class="todo-items <?= $t['done'] ? 'low-opacity' : '' ?> ">
                             <span class="todo-name"><?= $t['name'] ?></span>
                             <a href="/edit-todo.php?id=<?= $t['id'] ?>">
-                                <button class="btn btn-primary btn-small">Valider</button>
+                                <button class="btn btn-primary btn-small"><?= $t['done'] ? 'Annuler' : 'Valider'  ?></button>
                             </a>
                             <button class="btn btn-danger btn-small">Supprimer</button>
                         </li>
